@@ -1,0 +1,221 @@
+2025-09-06 19:17:52,928 - __main__ - INFO - Starting Assam Political Survey Google Forms Generation for AC 111, 112, 113
+2025-09-06 19:17:52,928 - __main__ - INFO - Target AC numbers: [111, 112, 113]
+2025-09-06 19:17:52,928 - __main__ - INFO - Loading configuration...
+2025-09-06 19:17:52,931 - __main__ - ERROR - Unexpected error: 'ConfigLoader' object has no attribute 'load_all'
+2025-09-06 19:18:24,854 - __main__ - INFO - Starting Assam Political Survey Google Forms Generation for AC 111, 112, 113
+2025-09-06 19:18:24,854 - __main__ - INFO - Target AC numbers: [111, 112, 113]
+2025-09-06 19:18:24,854 - __main__ - INFO - Loading configuration...
+2025-09-06 19:18:24,856 - __main__ - INFO - Configuration loaded successfully
+2025-09-06 19:18:24,856 - __main__ - INFO - Initializing Excel processor...
+2025-09-06 19:18:24,857 - __main__ - ERROR - Unexpected error: 'ConfigLoader' object has no attribute 'config'
+2025-09-06 19:19:06,913 - __main__ - INFO - Starting Assam Political Survey Google Forms Generation for AC 111, 112, 113
+2025-09-06 19:19:06,913 - __main__ - INFO - Target AC numbers: [111, 112, 113]
+2025-09-06 19:19:06,914 - __main__ - INFO - Loading configuration...
+2025-09-06 19:19:06,916 - __main__ - INFO - Configuration loaded successfully
+2025-09-06 19:19:06,916 - __main__ - INFO - Initializing Excel processor...
+2025-09-06 19:19:06,916 - excel_processor - INFO - Loading Excel file: ./assam.xlsx
+2025-09-06 19:19:07,097 - excel_processor - INFO - Loaded sheet 'AC<>PC' with 126 rows
+2025-09-06 19:19:07,229 - excel_processor - INFO - Loaded sheet 'GE2024' with 1385 rows
+2025-09-06 19:19:07,318 - excel_processor - INFO - Loaded sheet 'MLA_P2' with 537 rows
+2025-09-06 19:19:07,416 - excel_processor - INFO - Loaded sheet 'Caste Data' with 1633 rows
+2025-09-06 19:19:07,418 - __main__ - ERROR - Unexpected error: Error loading Excel file: Sheet validation failed: ["Sheet 'AC<>PC' missing columns: ['C']"]
+2025-09-06 19:19:57,337 - __main__ - INFO - Starting Assam Political Survey Google Forms Generation for AC 111, 112, 113
+2025-09-06 19:19:57,337 - __main__ - INFO - Target AC numbers: [111, 112, 113]
+2025-09-06 19:19:57,337 - __main__ - INFO - Loading configuration...
+2025-09-06 19:19:57,340 - __main__ - INFO - Configuration loaded successfully
+2025-09-06 19:19:57,340 - __main__ - INFO - Initializing Excel processor...
+2025-09-06 19:19:57,340 - excel_processor - INFO - Loading Excel file: ./assam.xlsx
+2025-09-06 19:19:57,596 - excel_processor - INFO - Loaded sheet 'AC<>PC' with 126 rows
+2025-09-06 19:19:57,815 - excel_processor - INFO - Loaded sheet 'GE2024' with 1385 rows
+2025-09-06 19:19:57,962 - excel_processor - INFO - Loaded sheet 'MLA_P2' with 537 rows
+2025-09-06 19:19:58,119 - excel_processor - INFO - Loaded sheet 'Caste Data' with 1633 rows
+2025-09-06 19:19:58,122 - __main__ - INFO - Excel processor initialized successfully
+2025-09-06 19:19:58,122 - __main__ - INFO - Checking if target ACs exist in all required sheets...
+2025-09-06 19:19:58,122 - excel_processor - INFO - Total unique AC numbers found: 0
+2025-09-06 19:19:58,122 - __main__ - INFO - Available AC numbers in Excel: []
+2025-09-06 19:19:58,122 - __main__ - ERROR - Missing AC numbers in Excel data: [111, 112, 113]
+2025-09-06 19:19:58,122 - __main__ - ERROR - Unexpected error: AC numbers [111, 112, 113] not found in Excel data
+2025-09-06 19:21:00,922 - __main__ - INFO - Starting Assam Political Survey Google Forms Generation for AC 111, 112, 113
+2025-09-06 19:21:00,922 - __main__ - INFO - Target AC numbers: [111, 112, 113]
+2025-09-06 19:21:00,922 - __main__ - INFO - Loading configuration...
+2025-09-06 19:21:00,926 - __main__ - INFO - Configuration loaded successfully
+2025-09-06 19:21:00,926 - __main__ - INFO - Initializing Excel processor...
+2025-09-06 19:21:00,926 - excel_processor - INFO - Loading Excel file: ./assam.xlsx
+2025-09-06 19:21:01,181 - excel_processor - INFO - Loaded sheet 'AC<>PC' with 126 rows
+2025-09-06 19:21:01,401 - excel_processor - INFO - Loaded sheet 'GE2024' with 1385 rows
+2025-09-06 19:21:01,548 - excel_processor - INFO - Loaded sheet 'MLA_P2' with 537 rows
+2025-09-06 19:21:01,705 - excel_processor - INFO - Loaded sheet 'Caste Data' with 1633 rows
+2025-09-06 19:21:01,707 - __main__ - INFO - Excel processor initialized successfully
+2025-09-06 19:21:01,707 - __main__ - INFO - Checking if target ACs exist in all required sheets...
+2025-09-06 19:21:01,707 - excel_processor - INFO - Found 126 AC numbers in ac_pc
+2025-09-06 19:21:01,709 - excel_processor - INFO - Found 126 AC numbers in ge2024
+2025-09-06 19:21:01,710 - excel_processor - INFO - Found 34 AC numbers in mla_p2
+2025-09-06 19:21:01,711 - excel_processor - INFO - Found 126 AC numbers in caste_data
+2025-09-06 19:21:01,711 - excel_processor - INFO - Total unique AC numbers found: 126
+2025-09-06 19:21:01,711 - __main__ - INFO - Available AC numbers in Excel: ['1', '10', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '11', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '12', '120', '121', '122', '123', '124', '125', '126', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '4', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '5', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '6', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '7', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '8', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '9', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99']
+2025-09-06 19:21:01,711 - __main__ - ERROR - Missing AC numbers in Excel data: [111, 112, 113]
+2025-09-06 19:21:01,711 - __main__ - ERROR - Unexpected error: AC numbers [111, 112, 113] not found in Excel data
+2025-09-06 19:21:18,806 - __main__ - INFO - Starting Assam Political Survey Google Forms Generation for AC 111, 112, 113
+2025-09-06 19:21:18,806 - __main__ - INFO - Target AC numbers: [111, 112, 113]
+2025-09-06 19:21:18,806 - __main__ - INFO - Loading configuration...
+2025-09-06 19:21:18,809 - __main__ - INFO - Configuration loaded successfully
+2025-09-06 19:21:18,809 - __main__ - INFO - Initializing Excel processor...
+2025-09-06 19:21:18,809 - excel_processor - INFO - Loading Excel file: ./assam.xlsx
+2025-09-06 19:21:19,061 - excel_processor - INFO - Loaded sheet 'AC<>PC' with 126 rows
+2025-09-06 19:21:19,285 - excel_processor - INFO - Loaded sheet 'GE2024' with 1385 rows
+2025-09-06 19:21:19,434 - excel_processor - INFO - Loaded sheet 'MLA_P2' with 537 rows
+2025-09-06 19:21:19,596 - excel_processor - INFO - Loaded sheet 'Caste Data' with 1633 rows
+2025-09-06 19:21:19,598 - __main__ - INFO - Excel processor initialized successfully
+2025-09-06 19:21:19,598 - __main__ - INFO - Checking if target ACs exist in all required sheets...
+2025-09-06 19:21:19,599 - excel_processor - INFO - Found 126 AC numbers in ac_pc
+2025-09-06 19:21:19,600 - excel_processor - INFO - Found 126 AC numbers in ge2024
+2025-09-06 19:21:19,601 - excel_processor - INFO - Found 34 AC numbers in mla_p2
+2025-09-06 19:21:19,603 - excel_processor - INFO - Found 126 AC numbers in caste_data
+2025-09-06 19:21:19,603 - excel_processor - INFO - Total unique AC numbers found: 126
+2025-09-06 19:21:19,603 - __main__ - INFO - Available AC numbers in Excel: ['1', '10', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '11', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '12', '120', '121', '122', '123', '124', '125', '126', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '4', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '5', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '6', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '7', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '8', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '9', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99']
+2025-09-06 19:21:19,603 - __main__ - INFO - All target AC numbers found in Excel data
+2025-09-06 19:21:19,603 - __main__ - INFO - Extracting survey data for target AC numbers...
+2025-09-06 19:21:19,603 - __main__ - INFO - Processing AC 111...
+2025-09-06 19:21:19,603 - excel_processor - INFO - Extracting all data for AC 111
+2025-09-06 19:21:19,604 - excel_processor - INFO - Found 9 party options for AC 111
+2025-09-06 19:21:19,606 - excel_processor - INFO - Found 6 MP candidates for AC 111
+2025-09-06 19:21:19,607 - excel_processor - INFO - Found 13 MLA candidates for AC 111
+2025-09-06 19:21:19,608 - excel_processor - INFO - Found 6 Congress candidates for AC 111
+2025-09-06 19:21:19,610 - excel_processor - INFO - Found 17 caste options for AC 111
+2025-09-06 19:21:19,610 - __main__ - INFO - Successfully extracted data for AC 111
+2025-09-06 19:21:19,610 - __main__ - INFO - AC 111 data summary:
+2025-09-06 19:21:19,610 - __main__ - INFO -   - Party options: 9
+2025-09-06 19:21:19,610 - __main__ - INFO -   - MP candidates: 6
+2025-09-06 19:21:19,610 - __main__ - INFO -   - MLA candidates: 13
+2025-09-06 19:21:19,610 - __main__ - INFO -   - Congress candidates: 6
+2025-09-06 19:21:19,610 - __main__ - INFO -   - Caste options: 17
+2025-09-06 19:21:19,610 - __main__ - INFO - Processing AC 112...
+2025-09-06 19:21:19,610 - excel_processor - INFO - Extracting all data for AC 112
+2025-09-06 19:21:19,610 - excel_processor - INFO - Found 9 party options for AC 112
+2025-09-06 19:21:19,611 - excel_processor - INFO - Found 6 MP candidates for AC 112
+2025-09-06 19:21:19,612 - excel_processor - INFO - Found 17 MLA candidates for AC 112
+2025-09-06 19:21:19,613 - excel_processor - INFO - Found 7 Congress candidates for AC 112
+2025-09-06 19:21:19,616 - excel_processor - INFO - Found 19 caste options for AC 112
+2025-09-06 19:21:19,616 - __main__ - INFO - Successfully extracted data for AC 112
+2025-09-06 19:21:19,616 - __main__ - INFO - AC 112 data summary:
+2025-09-06 19:21:19,616 - __main__ - INFO -   - Party options: 9
+2025-09-06 19:21:19,616 - __main__ - INFO -   - MP candidates: 6
+2025-09-06 19:21:19,616 - __main__ - INFO -   - MLA candidates: 17
+2025-09-06 19:21:19,616 - __main__ - INFO -   - Congress candidates: 7
+2025-09-06 19:21:19,616 - __main__ - INFO -   - Caste options: 19
+2025-09-06 19:21:19,616 - __main__ - INFO - Processing AC 113...
+2025-09-06 19:21:19,616 - excel_processor - INFO - Extracting all data for AC 113
+2025-09-06 19:21:19,616 - excel_processor - INFO - Found 9 party options for AC 113
+2025-09-06 19:21:19,617 - excel_processor - INFO - Found 6 MP candidates for AC 113
+2025-09-06 19:21:19,618 - excel_processor - INFO - Found 15 MLA candidates for AC 113
+2025-09-06 19:21:19,619 - excel_processor - INFO - Found 7 Congress candidates for AC 113
+2025-09-06 19:21:19,621 - excel_processor - INFO - Found 16 caste options for AC 113
+2025-09-06 19:21:19,621 - __main__ - INFO - Successfully extracted data for AC 113
+2025-09-06 19:21:19,621 - __main__ - INFO - AC 113 data summary:
+2025-09-06 19:21:19,621 - __main__ - INFO -   - Party options: 9
+2025-09-06 19:21:19,621 - __main__ - INFO -   - MP candidates: 6
+2025-09-06 19:21:19,621 - __main__ - INFO -   - MLA candidates: 15
+2025-09-06 19:21:19,621 - __main__ - INFO -   - Congress candidates: 7
+2025-09-06 19:21:19,621 - __main__ - INFO -   - Caste options: 16
+2025-09-06 19:21:19,621 - __main__ - INFO - Successfully extracted data for 3 AC numbers
+2025-09-06 19:21:19,621 - __main__ - INFO - Validating extracted data...
+2025-09-06 19:21:19,621 - __main__ - ERROR - Unexpected error: 'DataValidator' object has no attribute 'validate_all_data'
+2025-09-06 19:21:53,556 - __main__ - INFO - Starting Assam Political Survey Google Forms Generation for AC 111, 112, 113
+2025-09-06 19:21:53,556 - __main__ - INFO - Target AC numbers: [111, 112, 113]
+2025-09-06 19:21:53,556 - __main__ - INFO - Loading configuration...
+2025-09-06 19:21:53,560 - __main__ - INFO - Configuration loaded successfully
+2025-09-06 19:21:53,560 - __main__ - INFO - Initializing Excel processor...
+2025-09-06 19:21:53,560 - excel_processor - INFO - Loading Excel file: ./assam.xlsx
+2025-09-06 19:21:53,818 - excel_processor - INFO - Loaded sheet 'AC<>PC' with 126 rows
+2025-09-06 19:21:54,046 - excel_processor - INFO - Loaded sheet 'GE2024' with 1385 rows
+2025-09-06 19:21:54,200 - excel_processor - INFO - Loaded sheet 'MLA_P2' with 537 rows
+2025-09-06 19:21:54,364 - excel_processor - INFO - Loaded sheet 'Caste Data' with 1633 rows
+2025-09-06 19:21:54,366 - __main__ - INFO - Excel processor initialized successfully
+2025-09-06 19:21:54,366 - __main__ - INFO - Checking if target ACs exist in all required sheets...
+2025-09-06 19:21:54,367 - excel_processor - INFO - Found 126 AC numbers in ac_pc
+2025-09-06 19:21:54,369 - excel_processor - INFO - Found 126 AC numbers in ge2024
+2025-09-06 19:21:54,369 - excel_processor - INFO - Found 34 AC numbers in mla_p2
+2025-09-06 19:21:54,371 - excel_processor - INFO - Found 126 AC numbers in caste_data
+2025-09-06 19:21:54,371 - excel_processor - INFO - Total unique AC numbers found: 126
+2025-09-06 19:21:54,371 - __main__ - INFO - Available AC numbers in Excel: ['1', '10', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '11', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '12', '120', '121', '122', '123', '124', '125', '126', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '4', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '5', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '6', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '7', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '8', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '9', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99']
+2025-09-06 19:21:54,371 - __main__ - INFO - All target AC numbers found in Excel data
+2025-09-06 19:21:54,371 - __main__ - INFO - Extracting survey data for target AC numbers...
+2025-09-06 19:21:54,372 - __main__ - INFO - Processing AC 111...
+2025-09-06 19:21:54,372 - excel_processor - INFO - Extracting all data for AC 111
+2025-09-06 19:21:54,373 - excel_processor - INFO - Found 9 party options for AC 111
+2025-09-06 19:21:54,375 - excel_processor - INFO - Found 6 MP candidates for AC 111
+2025-09-06 19:21:54,375 - excel_processor - INFO - Found 13 MLA candidates for AC 111
+2025-09-06 19:21:54,376 - excel_processor - INFO - Found 6 Congress candidates for AC 111
+2025-09-06 19:21:54,378 - excel_processor - INFO - Found 17 caste options for AC 111
+2025-09-06 19:21:54,378 - __main__ - INFO - Successfully extracted data for AC 111
+2025-09-06 19:21:54,378 - __main__ - INFO - AC 111 data summary:
+2025-09-06 19:21:54,378 - __main__ - INFO -   - Party options: 9
+2025-09-06 19:21:54,378 - __main__ - INFO -   - MP candidates: 6
+2025-09-06 19:21:54,378 - __main__ - INFO -   - MLA candidates: 13
+2025-09-06 19:21:54,378 - __main__ - INFO -   - Congress candidates: 6
+2025-09-06 19:21:54,378 - __main__ - INFO -   - Caste options: 17
+2025-09-06 19:21:54,378 - __main__ - INFO - Processing AC 112...
+2025-09-06 19:21:54,378 - excel_processor - INFO - Extracting all data for AC 112
+2025-09-06 19:21:54,379 - excel_processor - INFO - Found 9 party options for AC 112
+2025-09-06 19:21:54,380 - excel_processor - INFO - Found 6 MP candidates for AC 112
+2025-09-06 19:21:54,381 - excel_processor - INFO - Found 17 MLA candidates for AC 112
+2025-09-06 19:21:54,382 - excel_processor - INFO - Found 7 Congress candidates for AC 112
+2025-09-06 19:21:54,384 - excel_processor - INFO - Found 19 caste options for AC 112
+2025-09-06 19:21:54,384 - __main__ - INFO - Successfully extracted data for AC 112
+2025-09-06 19:21:54,384 - __main__ - INFO - AC 112 data summary:
+2025-09-06 19:21:54,384 - __main__ - INFO -   - Party options: 9
+2025-09-06 19:21:54,384 - __main__ - INFO -   - MP candidates: 6
+2025-09-06 19:21:54,384 - __main__ - INFO -   - MLA candidates: 17
+2025-09-06 19:21:54,384 - __main__ - INFO -   - Congress candidates: 7
+2025-09-06 19:21:54,384 - __main__ - INFO -   - Caste options: 19
+2025-09-06 19:21:54,384 - __main__ - INFO - Processing AC 113...
+2025-09-06 19:21:54,384 - excel_processor - INFO - Extracting all data for AC 113
+2025-09-06 19:21:54,384 - excel_processor - INFO - Found 9 party options for AC 113
+2025-09-06 19:21:54,385 - excel_processor - INFO - Found 6 MP candidates for AC 113
+2025-09-06 19:21:54,386 - excel_processor - INFO - Found 15 MLA candidates for AC 113
+2025-09-06 19:21:54,387 - excel_processor - INFO - Found 7 Congress candidates for AC 113
+2025-09-06 19:21:54,389 - excel_processor - INFO - Found 16 caste options for AC 113
+2025-09-06 19:21:54,389 - __main__ - INFO - Successfully extracted data for AC 113
+2025-09-06 19:21:54,389 - __main__ - INFO - AC 113 data summary:
+2025-09-06 19:21:54,389 - __main__ - INFO -   - Party options: 9
+2025-09-06 19:21:54,389 - __main__ - INFO -   - MP candidates: 6
+2025-09-06 19:21:54,389 - __main__ - INFO -   - MLA candidates: 15
+2025-09-06 19:21:54,389 - __main__ - INFO -   - Congress candidates: 7
+2025-09-06 19:21:54,389 - __main__ - INFO -   - Caste options: 16
+2025-09-06 19:21:54,389 - __main__ - INFO - Successfully extracted data for 3 AC numbers
+2025-09-06 19:21:54,389 - __main__ - INFO - Validating extracted data...
+2025-09-06 19:21:54,389 - data_validator - INFO - Data validation summary for 3 AC numbers:
+2025-09-06 19:21:54,389 - data_validator - INFO - AC 111: All data available
+2025-09-06 19:21:54,389 - data_validator - INFO - AC 112: All data available
+2025-09-06 19:21:54,389 - data_validator - INFO - AC 113: All data available
+2025-09-06 19:21:54,389 - data_validator - INFO - All AC numbers have complete data
+2025-09-06 19:21:54,389 - __main__ - INFO - Data validation completed
+2025-09-06 19:21:54,389 - __main__ - INFO - Initializing Google Forms generator...
+2025-09-06 19:21:54,389 - form_generator - INFO - Setting up Google Forms API authentication
+2025-09-06 19:21:54,389 - form_generator - INFO - A browser window will open for authentication...
+2025-09-06 19:22:00,725 - google_auth_oauthlib.flow - INFO - "GET /?state=ObX0t6CyuscfY6MbLJ5jFTuDPlmFsH&code=4/0AVMBsJg7e1n4Q7TMv9VXlgKRXtyog-4Ad8b2IlYY51lEEg7FJA1wq-iAWaqhNXI06UCtHw&scope=https://www.googleapis.com/auth/forms.body%20https://www.googleapis.com/auth/drive HTTP/1.1" 200 53
+2025-09-06 19:22:01,081 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-06 19:22:01,082 - form_generator - INFO - Google Forms API setup successful
+2025-09-06 19:22:03,787 - form_generator - INFO - ✓ Google Forms API connection successful
+2025-09-06 19:22:03,787 - form_generator - INFO - Test form created and accessible: 1zcpoxhx6qP8VYbYa6l4p_ODs1WtnW7UsUCQuivHfeAg
+2025-09-06 19:22:03,787 - __main__ - INFO - Google Forms generator initialized successfully
+2025-09-06 19:22:03,787 - __main__ - INFO - Generating Google Form...
+2025-09-06 19:22:06,388 - form_generator - INFO - Created form: Assam Political Survey - AC Multiple ACs (ID: 1_DzpKJIiXjEhRttG3CmF6SSzbkwukGN-bqKRC8-wtLo)
+2025-09-06 19:22:08,087 - form_generator - INFO - Updated form description
+2025-09-06 19:22:09,722 - form_generator - ERROR - Error extracting item ID from response: 'item'
+2025-09-06 19:22:09,723 - form_generator - ERROR - Response structure: {'replies': [{'createItem': {'itemId': '00ade462'}}], 'writeControl': {'requiredRevisionId': '00000005'}}
+2025-09-06 19:22:10,540 - form_generator - ERROR - Error extracting item IDs from response: 'item'
+2025-09-06 19:22:10,540 - form_generator - ERROR - Response structure: {'replies': [{'createItem': {'itemId': '643bbba3', 'questionId': ['690abacf']}}, {'createItem': {'itemId': '3cc3663c', 'questionId': ['74ad55ab']}}, {'createItem': {'itemId': '49723ef0', 'questionId': ['0321167c']}}, {'createItem': {'itemId': '0bcbb9a1', 'questionId': ['0affe52c']}}], 'writeControl': {'requiredRevisionId': '00000006'}}
+2025-09-06 19:22:10,541 - form_generator - INFO - Added basic info section with 4 questions
+2025-09-06 19:22:12,182 - form_generator - ERROR - Error extracting item IDs from response: 'item'
+2025-09-06 19:22:12,183 - form_generator - INFO - Added AC 111 section with 8 items
+2025-09-06 19:22:13,750 - form_generator - ERROR - Error extracting item IDs from response: 'item'
+2025-09-06 19:22:13,750 - form_generator - INFO - Added AC 112 section with 8 items
+2025-09-06 19:22:15,458 - form_generator - ERROR - Error extracting item IDs from response: 'item'
+2025-09-06 19:22:15,458 - form_generator - INFO - Added AC 113 section with 8 items
+2025-09-06 19:22:17,097 - form_generator - ERROR - Error extracting item IDs from response: 'item'
+2025-09-06 19:22:17,098 - form_generator - INFO - Added final section with 4 items
+2025-09-06 19:22:17,098 - form_generator - INFO - Successfully generated complete form for 3 AC numbers
+2025-09-06 19:22:17,098 - __main__ - INFO - Google Form generated successfully
+2025-09-06 19:22:17,100 - __main__ - INFO - Form metadata saved to assam_form_metadata.json
+2025-09-06 19:22:17,101 - __main__ - INFO - Assam Political Survey Google Forms Generation completed successfully

@@ -1,0 +1,33 @@
+excel:
+  file_path: "assam.xlsx"
+  sheets:
+    ac_pc: "AC<>PC"
+    ge2024: "GE2024"
+    mla_p2: "MLA_P2"
+    caste_data: "Caste Data"
+  columns:
+    ac_pc:
+      ac_number: "AC No."
+      party_options: ["Party 1", "Party 2", "Party- 3", "Party - 4", "Party - 5", "Party - 6", "Party - 7", "Party - 8", "Party - 9", "Party - 10", "Party - 11", "Party - 12", "Party - 13"]
+    ge2024:
+      ac_number: "AC No"
+      candidate_name: "Candidate"
+    mla_p2:
+      ac_number: "AC No."
+      candidate_name: "Name"
+      party_affiliation: "Party"
+    caste_data:
+      ac_number: "AC No."
+      caste_name: "Caste Name"
+
+google_forms:
+  scopes:
+    - "https://www.googleapis.com/auth/forms.body"
+    - "https://www.googleapis.com/auth/drive"
+  credentials_file: "credentials.json"
+  form_title_prefix: "Assam Political Survey - AC"
+
+settings:
+  caller_name: "Political Survey Team"
+  retry_attempts: 3
+  retry_delay: 2
