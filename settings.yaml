@@ -31,3 +31,13 @@ settings:
   caller_name: "Political Survey Team"
   retry_attempts: 3
   retry_delay: 2
+
+fixed_options:
+  q1_voting: ["Other Parties", "Independent Candidate", "NOTA", "Not Sure"]
+  q2_voting2021: ["Other Parties", "Independent Candidate", "NOTA", "Not Sure"]
+  q3_voting2024: ["Anyone from BJP", "Anyone from INC", "Anyone from AIUDF", "Anyone from AGP", "Anyone from AJP", "Anyone from UPPL", "Anyone from BPF", "Other Parties", "Independent Candidate", "Not Sure", "Did not Vote"]
+  q4_mla_preference: ["Anyone from BJP", "Anyone from INC", "Anyone from AIUDF", "Anyone from AGP", "Anyone from AJP", "Anyone from UPPL", "Anyone from BPF", "NOTA", "Not Sure"]
+  q5_congress_preference: ["Not Sure", "Only BJP Candidate", "Only AGP Candidate", "Only AJP Candidate", "Only RD Candidate", "Only AIUDF Candidate", "Only BPF Candidate", "Only UPPL Candidate"]
+  q6_caste: ["Other Caste", "Do not want to Answer"]
+  q7_income: ["Less than 5000", "5000-7500", "7500-10000", "10000-12500", "12500-15000", "15000-20000", "More than 20000", "Can't say", "Call disconnected"]
+  q8_language: ["Assamese", "Bengali", "Hindi", "Bodo", "Other language"]

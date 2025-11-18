@@ -1,32 +1,28 @@
 # Political Survey Google Forms Automation Agent
 
-A Python automation agent that generates dynamic Google Forms for political survey data collection in Assam Assembly Constituencies. The agent extracts survey options from Excel sheets and creates AC-specific questionnaires with conditional logic.
+A Python automation agent that generates dynamic Google Forms for political survey data collection in Assam Assembly Constituencies. The agent extracts survey options from Excel sheets and creates AC-specific questionnaires.
 
 ## Overview
 
 This automation agent creates comprehensive Google Forms for political surveys with:
 - Bilingual support (English and Bengali)
 - Dynamic AC-specific sections based on Excel data
-- Conditional logic for different constituencies
-- Automated data extraction and validation
+- Automated data extraction from Excel
+- Interactive command-line interface
 - Complete form generation with proper structure
 
 ## Project Structure
 
 ```
-political-survey-agent/
-├── main.py                       # Entry point and orchestration
-├── excel_processor.py            # Excel data extraction logic
-├── form_generator.py             # Google Forms API interactions
-├── data_validator.py             # Data validation and error handling
-├── config_loader.py              # Configuration file handling
-├── survey_data.xlsx              # Source Excel file with all sheets
+gform_agent/
+├── main.py                       # All-in-one consolidated script
+├── assam.xlsx                    # Source Excel file with all AC data
 ├── credentials.json              # Google OAuth credentials (you need to add this)
+├── credentials_template.json     # Template for credentials setup
 ├── settings.yaml                 # App configuration
-├── questions.json                # Bilingual question text
 ├── requirements.txt              # Python dependencies
-├── .env                         # Environment variables
-└── README.md                    # This file
+├── generated_forms.json          # Tracking of generated forms
+└── README.md                     # This file
 ```
 
 ## Installation
@@ -46,12 +42,11 @@ pip install -r requirements.txt
    - Download the credentials JSON file
    - Rename it to `credentials.json` and place in project root
 
-4. **Prepare your Excel data file:**
-   - Create `survey_data.xlsx` with required sheets:
-     - `AC<>PC` - AC and party data
-     - `GE2024` - MP candidates data
-     - `MLA_P2` - MLA candidates data
-     - `Caste_Data` - Caste information
+4. **Your Excel data file (`assam.xlsx`) should have these sheets:**
+   - `AC<>PC` - AC and party data
+   - `GE2024` - MP candidates data
+   - `MLA_P2` - MLA candidates data
+   - `Caste_Data` - Caste information
 
 ## Excel Data Structure Requirements
 
@@ -77,44 +72,42 @@ pip install -r requirements.txt
 ### Basic Usage
 
 1. **Ensure all required files are present:**
-   - `survey_data.xlsx` with proper data structure
+   - `assam.xlsx` with proper data structure
    - `credentials.json` with Google API credentials
+   - `settings.yaml` with configuration
 
 2. **Run the agent:**
 ```bash
 python main.py
 ```
 
-3. **Follow OAuth authentication flow** (browser window will open)
-
-4. **Check outputs:**
-   - Form will be created in your Google Drive
-   - `form_metadata.json` contains form details
-   - `political_survey_agent.log` contains execution logs
-
-### Create Sample Data
-
-To create a sample Excel file structure for testing:
-
-```bash
-python main.py --create-sample
+3. **Enter AC numbers when prompted:**
+```
+Enter AC numbers separated by commas (e.g., 22,23,25,26):
+> 22,23,25,26
 ```
 
-This creates `sample_survey_data.xlsx` which you can rename to `survey_data.xlsx` and modify with your actual data.
+4. **Follow OAuth authentication flow** (browser window will open on first run)
+
+5. **Check outputs:**
+   - Form URL will be displayed in the console
+   - Metadata saved to `ac_22_23_25_26_bengali_metadata.json`
+   - `political_survey_agent.log` contains execution logs
+   - Form link is ready to share!
 
 ## Form Structure
 
 The generated form includes:
 
 ### 1. Introduction Section
-- Bilingual welcome message
+- Bilingual welcome message (Bengali and English)
 - Survey purpose explanation
 - Confidentiality notice
 
 ### 2. Basic Information Section
 - Agent ID (text input)
 - Mobile Number (text input with validation)
-- Gender (radio buttons: Male, Female, Other)
+- Gender (radio buttons: Male, Female)
 - AC Selection (dropdown with all available ACs)
 
 ### 3. AC-Specific Sections
@@ -131,24 +124,21 @@ Each AC gets exactly 6 questions:
 - Family income (multiple choice)
 - Interview language (multiple choice)
 
-## Configuration
+All questions are displayed in bilingual format (English | Bengali).
 
-### Environment Variables (.env)
-```
-GOOGLE_CREDENTIALS_FILE=credentials.json
-EXCEL_FILE_PATH=survey_data.xlsx
-CALLER_NAME=Political Survey Team
-```
+## Configuration
 
 ### Settings (settings.yaml)
 - Excel file and sheet configurations
 - Google Forms API settings
 - Retry and error handling parameters
+- Fixed options for questions
 
-### Questions (questions.json)
-- All bilingual question text
-- Option lists for common questions
-- Form section descriptions
+The consolidated `main.py` script includes:
+- **ConfigLoader**: Loads settings from YAML and environment
+- **DataValidator**: Validates AC numbers and data integrity
+- **ExcelProcessor**: Extracts data from Excel sheets
+- **FormGenerator**: Creates and manages Google Forms via API
 
 ## Data Validation
 
@@ -157,8 +147,9 @@ The agent performs comprehensive validation:
 - **AC Number Validation**: Ensures all AC numbers are valid integers
 - **Data Availability**: Checks each AC has data in all required sheets
 - **Option Validation**: Removes empty/invalid options
-- **Structure Validation**: Verifies form structure before generation
 - **Error Handling**: Graceful handling of missing data with fallback options
+
+All validation logic is built into the consolidated `main.py` script.
 
 ## Logging and Monitoring
 
@@ -169,21 +160,16 @@ The agent performs comprehensive validation:
 
 ### Output Files
 - **political_survey_agent.log**: Detailed execution log
-- **form_metadata.json**: Complete form generation metadata
-
-### Monitoring Features
-- Data extraction summaries for each AC
-- Validation warnings and error counts
-- Form generation progress tracking
-- API retry and error recovery
+- **ac_[numbers]_bengali_metadata.json**: Form generation metadata for each run
+- **generated_forms.json**: Master tracking file for all generated forms
 
 ## Error Handling
 
 ### Common Issues and Solutions
 
 1. **"File not found" errors:**
-   - Ensure `survey_data.xlsx` and `credentials.json` exist
-   - Check file paths in configuration
+   - Ensure `assam.xlsx` and `credentials.json` exist
+   - Check file paths in settings.yaml
 
 2. **Google API authentication issues:**
    - Verify credentials.json is valid
@@ -200,27 +186,17 @@ The agent performs comprehensive validation:
    - Verify network connectivity
    - Review error logs for specific issues
 
-### Retry Logic
-- Automatic retry for Google API failures (3 attempts)
-- Exponential backoff for rate limiting
-- Graceful degradation with fallback options
-
 ## Customization
 
-### Adding New Questions
-1. Update `questions.json` with new question text
-2. Modify form generation logic in `form_generator.py`
-3. Update validation rules if needed
+### Modifying the Script
+Since all code is in a single `main.py` file, you can easily:
 
-### Changing Data Sources
-1. Update Excel column mappings in `settings.yaml`
-2. Modify extraction logic in `excel_processor.py`
-3. Update validation rules in `data_validator.py`
+1. **Add new questions**: Edit the form generation section
+2. **Change data sources**: Update Excel column mappings in ConfigLoader
+3. **Modify validation**: Update DataValidator class
+4. **Change form structure**: Edit FormGenerator methods
 
-### Modifying Form Structure
-1. Update section creation in `form_generator.py`
-2. Modify conditional logic as needed
-3. Update validation rules for new structure
+The consolidated structure makes it easy to understand and modify the entire workflow.
 
 ## API Limits and Quotas
 
@@ -241,63 +217,52 @@ The agent includes retry logic and rate limiting to handle these constraints.
 ## Troubleshooting
 
 ### Enable Debug Logging
-Modify logging level in `main.py`:
+Modify logging level in `main.py` (line ~552):
 ```python
 logger = setup_logging("DEBUG")
 ```
 
-### Test Individual Components
-```python
-# Test Excel processing only
-from excel_processor import ExcelProcessor
-from config_loader import load_config
+### Test Components
+The consolidated script includes all components in one file:
+- ConfigLoader (handles YAML and settings)
+- ExcelProcessor (extracts data from Excel)
+- FormGenerator (creates Google Forms)
+- DataValidator (validates all data)
 
-config = load_config()
-processor = ExcelProcessor(config)
-ac_numbers = processor.get_all_ac_numbers()
-print(f"Found AC numbers: {ac_numbers}")
-```
-
-### Validate Configuration
-```python
-from config_loader import load_config
-
-try:
-    config = load_config()
-    errors = config.validate_configuration()
-    if errors:
-        print("Configuration errors:", errors)
-    else:
-        print("Configuration is valid")
-except Exception as e:
-    print(f"Configuration error: {e}")
-```
+All classes are accessible within `main.py` for testing and debugging.
 
 ## Contributing
 
 1. Fork the repository
 2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
+3. Make your changes to `main.py`
+4. Test thoroughly with your data
 5. Submit a pull request
 
 ## License
 
-This project is licensed under the MIT License. See LICENSE file for details.
+This project is licensed under the MIT License.
 
 ## Support
 
 For issues and questions:
 1. Check the troubleshooting section
-2. Review log files for error details
-3. Ensure all prerequisites are met
+2. Review `political_survey_agent.log` for error details
+3. Ensure all prerequisites are met (credentials.json, assam.xlsx, settings.yaml)
 4. Create an issue with detailed error information
 
 ## Version History
 
-- **v1.0.0**: Initial release with core functionality
+- **v2.0.0**: Consolidated single-file version
+  - All code in one `main.py` file
+  - Simplified structure with 7 essential files
+  - Interactive command-line interface
+  - Bengali language support
+  - Streamlined deployment
+
+- **v1.0.0**: Initial release
   - Excel data extraction
   - Google Forms generation
   - Bilingual support
-  - AC-specific conditional logic
-  - Comprehensive validation and error handling
+  - AC-specific sections
+  - Comprehensive validation
